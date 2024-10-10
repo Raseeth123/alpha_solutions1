@@ -37,26 +37,31 @@ export default function AddTopic() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col gap-6 bg-gray-900 shadow-2xl rounded-sm p-10 max-w-lg mx-auto mt-20"
+    >
+      <h2 className="text-3xl font-extrabold text-purple-400 mb-6">Add New Topic</h2>
+
       <input
         onChange={(e) => setTitle(e.target.value)}
         value={title}
-        className="border border-slate-500 px-8 py-2"
+        className="border border-purple-600 bg-gray-800 text-white rounded-md px-6 py-4 text-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-200"
         type="text"
-        placeholder="Topic Title"
+        placeholder="Enter Topic Title"
       />
 
       <input
         onChange={(e) => setDescription(e.target.value)}
         value={description}
-        className="border border-slate-500 px-8 py-2"
+        className="border border-purple-600 bg-gray-800 text-white rounded-md px-6 py-4 text-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-200"
         type="text"
-        placeholder="Topic Description"
+        placeholder="Enter Topic Description"
       />
 
       <button
         type="submit"
-        className="bg-green-600 font-bold text-white py-3 px-6 w-fit"
+        className="bg-purple-600 text-white font-bold py-4 rounded-md shadow-md transition-all duration-200 transform active:scale-95"
       >
         Add Topic
       </button>
