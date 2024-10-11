@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function EditTopicForm({ id, title, description }) {
+export default function EditProductForm({ id, title, description }) {
   const [newTitle, setNewTitle] = useState(title);
   const [newDescription, setNewDescription] = useState(description);
 
@@ -22,7 +22,7 @@ export default function EditTopicForm({ id, title, description }) {
       });
 
       if (!res.ok) {
-        throw new Error("Failed to update topic");
+        throw new Error("Failed to update Product");
       }
 
       router.refresh();
@@ -44,7 +44,7 @@ export default function EditTopicForm({ id, title, description }) {
         value={newTitle}
         className="border border-purple-600 bg-gray-800 text-white rounded-md px-6 py-4 text-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-200"
         type="text"
-        placeholder="Enter Topic Title"
+        placeholder="Enter Product Title"
       />
 
       <input
@@ -52,7 +52,7 @@ export default function EditTopicForm({ id, title, description }) {
         value={newDescription}
         className="border border-purple-600 bg-gray-800 text-white rounded-md px-6 py-4 text-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all duration-200"
         type="text"
-        placeholder="Enter Topic Description"
+        placeholder="Enter Product Description"
       />
 
       <button
