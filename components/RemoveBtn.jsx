@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function RemoveBtn({ id }) {
   const router = useRouter();
   
-  const removeTopic = async () => {
+  const removeProduct = async () => {
     const confirmed = confirm("Are you sure?");
     if (confirmed) {
       const res = await fetch(`http://localhost:3000/api/topics?id=${id}`, {
@@ -21,7 +21,7 @@ export default function RemoveBtn({ id }) {
 
   return (
     <button
-      onClick={removeTopic}
+      onClick={removeProduct}
       className="bg-red-500 text-white p-3 rounded-full shadow-lg transition-all duration-200 ease-in-out flex items-center justify-center"
       title="Delete"
     >
